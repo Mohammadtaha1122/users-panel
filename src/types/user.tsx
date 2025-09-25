@@ -1,3 +1,13 @@
+export interface UserAddress {
+  address: string
+  city: string
+  state: string
+  stateCode: string
+  postalCode: string
+  country:string
+}
+
+
 export interface User {
   id: number
   firstName: string
@@ -6,7 +16,7 @@ export interface User {
   email: string
   password: string
   image: string
-  address: any
+  address: UserAddress
   gender: string
   birthDate: string
   phone: string
