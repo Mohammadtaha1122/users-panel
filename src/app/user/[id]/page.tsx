@@ -32,7 +32,7 @@ const UserDetail = () => {
     router.push("/")
   }
 
-  if (!detail) return <Loading />;
+  if (!detail) return <p className="text-xl text-center">loading . . .</p>;
 
   return (
     <section className="flex">
@@ -52,13 +52,13 @@ const UserDetail = () => {
         </ul>
       </aside>
 
-      <main className="flex-1 p-10">
+      <main className="flex-1 sm:p-10 max-sm:py-4 max-sm:px-2">
         <h1 className="text-sky-600 max-sm:flex-col flex justify-between text-2xl font-bold mb-8">
           <span>Personal Detail</span>
           <Link className="hover:underline  max-sm:underline" href={'/'}>go to home</Link>
         </h1>
 
-        <div className="bg-white shadow-lg rounded-xl px-8 py-16 max-sm:flex-col max-sm:text-center flex gap-10">
+        <div className="bg-white shadow-lg rounded-xl sm:px-8 py-16 max-sm:flex-col max-sm:text-center flex gap-10">
           <div className="flex flex-col gap-6 items-center">
             <Image
               src={detail.image}
