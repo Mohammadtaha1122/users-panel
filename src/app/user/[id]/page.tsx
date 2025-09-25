@@ -36,7 +36,7 @@ const UserDetail = () => {
 
   return (
     <section className="flex">
-      <aside className="w-64 border-r border-gray-200 bg-gray-50 px-6 py-5 h-screen overflow-y-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-500 transition">
+      <aside className="w-64 border-r max-md:hidden max-lg:w-44 border-gray-200 bg-gray-50 px-6 py-5 h-screen overflow-y-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-500 transition">
         <h2 className="text-xl font-semibold text-sky-600 mb-6">Users</h2>
         <ul className="flex flex-col gap-3">
           {usersState.map((user: User) => (
@@ -53,12 +53,12 @@ const UserDetail = () => {
       </aside>
 
       <main className="flex-1 p-10">
-        <h1 className="text-sky-600 flex justify-between text-2xl font-bold mb-8">
+        <h1 className="text-sky-600 max-sm:flex-col flex justify-between text-2xl font-bold mb-8">
           <span>Personal Detail</span>
-          <Link className="hover:underline" href={'/'}>go to home</Link>
+          <Link className="hover:underline  max-sm:underline" href={'/'}>go to home</Link>
         </h1>
 
-        <div className="bg-white shadow-lg rounded-xl px-8 py-16 flex gap-10">
+        <div className="bg-white shadow-lg rounded-xl px-8 py-16 max-sm:flex-col max-sm:text-center flex gap-10">
           <div className="flex flex-col gap-6 items-center">
             <Image
               src={detail.image}
@@ -76,7 +76,7 @@ const UserDetail = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 flex-1">
+          <div className="grid grid-cols-2 max-lg:grid-cols-1 max-md:grid-cols-2 max-sm:grid-cols-1 gap-8 flex-1">
             <div>
               <span className="block text-sm text-gray-500">Username</span>
               <span className="font-medium">{detail.username}</span>
